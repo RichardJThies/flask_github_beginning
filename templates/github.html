@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>GitHub info for User: {{user_info.login}}</h1><!--data sent from app.py being displayed. Could be based on user input, db, fetched from api. user_info matches the user_info before the = in the render_template-->
+
+<p>User's name: {{user_info.name}}</p><!--needs to be in double brackets because they will be filled in by the web server.Using the actual double brackets sumbols, even in comments crashes code-->
+
+<p>User's public repo count: {{user_info.public_repos}}</p>
+
+<p><a href="{{user_info.home_page}}">View user's repositories at GitHub</a></p><!--links need a/anchor elements, and href attributes-->
+
+<p>
+    <img src="{{user_info.avatar_url}}">
+</p><!--img tags dont have closed tags. src is finding where the image is-->
+
+<p>Do you want to try again? <a href="/">Go back to home page</a></p><!--relative url style, goes to other pages on the program website. Not using double bracket flask templates-->
+
+<a href="https://github.com">Visit GitHub's website</a><!--absolute url style-->
+{% endblock %}

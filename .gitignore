@@ -1,2 +1,6 @@
 venv
 __pycache__
+*.pyc
+.idea/
+env_setup.txt
+env
