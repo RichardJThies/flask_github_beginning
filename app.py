@@ -19,7 +19,7 @@ def get_user_info():#flask is unpacking query parameters in url and coverting th
     if error_message:#sending the error string returned from github_api to new page
         return render_template('error.html', error=error_message)
     else:
-        return render_template('github.html',  user_info=user_info)#adding keyword arguments to template. "github_username" is the label/name of the data 
+        return render_template('github.html', user_info=user_info)#adding keyword arguments to template. "github_username" is the label/name of the data 
 
 if __name__ == '__main__':
     app.run()
